@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class SomeBusinessImplTestUsingStub {
     @Test
-    void testGetLargest(){
+    void testGetLargest() throws Exception{
         SomeBusinessImpl someBusiness = new SomeBusinessImpl();
         someBusiness.setService(new DataServiceStub());
         int result = someBusiness.getLargest();

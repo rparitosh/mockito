@@ -6,7 +6,7 @@ import static org.mockito.Mockito.*;
 
 public class SomeBusinessImplTestUsingMock {
     @Test
-    public void testGetLargest(){
+    public void testGetLargest() throws Exception{
         DataService dataService = mock(DataService.class);
         when(dataService.getSomeData()).thenReturn(new int[] {5,10,20});
         SomeBusinessImpl someBusiness = new SomeBusinessImpl();
@@ -17,7 +17,7 @@ public class SomeBusinessImplTestUsingMock {
     }
 
     @Test
-    public void testGetLargestNegative(){
+    public void testGetLargestNegative()  throws Exception{
         DataService dataService = mock(DataService.class);
         when(dataService.getSomeData()).thenReturn(new int[] {-5,-10,-20});
         SomeBusinessImpl someBusiness = new SomeBusinessImpl();

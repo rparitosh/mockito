@@ -8,8 +8,12 @@ public class SomeBusinessImpl {
         this.service = service;
     }
 
-    public int getLargest(){
+    public int getLargest() throws Exception {
         int[] values = service.getSomeData();
+
+        if ( values.length ==0 ){
+            throw new Exception("No values to compare");
+        }
         int largest = Integer.MIN_VALUE;
 
         for (int i: values){
